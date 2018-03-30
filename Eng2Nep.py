@@ -152,10 +152,7 @@ nepDay = startingNepday
 while diff != 0:
 
 	# getting total number of days in month nepMonth in a year nepYear
-	# daysInMonth = nepaliMonths.get(nepYear)[nepMonth]
-	# daysInMonth = nepaliMonths[nepYear - startingNepYear][nepMonth]
 	daysInMonth = nepaliMonths[nepYear - 2000][nepMonth - 1]
-	# daysInMonth = nepaliMonths[nepYear - 2000][nepMonth]
 	nepDay+=1 # incrementing nepali day
 
 	if(nepDay > daysInMonth):
