@@ -112,10 +112,10 @@ nepaliMonths = [
 
 
 
-engMonth=int(input('Enter birth month in A.D.'))
-engDate=int(input('Enter birth date in A.D.'))
-engYear=int(input('Enter birth year in A.D.'))
-
+# engMonth=int(input('Enter birth month in A.D.'))
+# engDate=int(input('Enter birth date in A.D.'))
+# engYear=int(input('Enter birth year in A.D.'))
+engMonth, engDate, engYear = map(int, input("Enter English Month, Date and Year seperated by space: ").split())
 
 
 #define the least possible English date 1944/01/01 Saturday.
@@ -138,7 +138,7 @@ startingNepday = 17
 date0=date(engYear,engMonth,engDate)
 date1=date(startingEngYear,startingEngMonth,startingEngDay)
 diff=(date0 - date1).days
-print (diff)
+# print (diff)
 
 
 
