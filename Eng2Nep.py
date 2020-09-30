@@ -3,10 +3,10 @@ import datetime
 import time
 import calendar
 
-#  Below is a List of no. of days in each month  of each year within a valid range
+#  Below is a List of no. of days in each month  of each year within a valid range.
 #  where, 2000, 2001, 2002 and so on are the Nepali years and 30, 32, 31 and so on are the total days in months
-# Nepali year-month List
 
+# Nepali year-month List
 nepaliMonths = [
 			[ 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31 ],  #2000
 			[ 31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30 ],  #2001
@@ -110,20 +110,15 @@ nepaliMonths = [
 			[ 31, 31, 32, 31, 31, 31, 30, 29, 29, 30, 30, 30 ]   #2099
 		]
 
-
-
-# engMonth=int(input('Enter birth month in A.D.'))
-# engDate=int(input('Enter birth date in A.D.'))
-# engYear=int(input('Enter birth year in A.D.'))
 engMonth, engDate, engYear = map(int, input("Enter English Month, Date and Year seperated by space: ").split())
 
 
-#define the least possible English date 1944/01/01 Saturday.
+#Define the least possible English date 1944/01/01 Saturday.
 
 startingEngYear = 1944
 startingEngMonth = 1
 startingEngDay = 1
-dayOfWeek = calendar.SATURDAY  #1944 is a saturday
+dayOfWeek = calendar.SATURDAY  
 
 
 #Let's define the equivalent Nepali date 2000/09/17.
@@ -138,20 +133,17 @@ startingNepday = 17
 date0=date(engYear,engMonth,engDate)
 date1=date(startingEngYear,startingEngMonth,startingEngDay)
 diff=(date0 - date1).days
-# print (diff)
 
 
-
-
-#initialize required nepali date variables with starting  nepali date
+#Initialize required nepali date variables with starting  nepali date
 nepYear = startingNepYear
 nepMonth = startingNepMonth
 nepDay = startingNepday
 
-# decreament delta.days until its value becomes zero
+#Decreament delta.days until its value becomes zero.
 while diff != 0:
 
-	# getting total number of days in month nepMonth in a year nepYear
+	# Getting total number of days in month nepMonth in a year nepYear
 	daysInMonth = nepaliMonths[nepYear - 2000][nepMonth - 1]
 	nepDay+=1 # incrementing nepali day
 
@@ -163,7 +155,8 @@ while diff != 0:
 		nepYear+=1
 		nepMonth = 1
 
-	dayOfWeek+=1 #counting the days in terms of 7 days
+	dayOfWeek+=1 
+	#counting the days in terms of 7 days
 	if(dayOfWeek > 7):
 		dayOfWeek = 1
 
